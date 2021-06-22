@@ -2,14 +2,17 @@ import flatiron from '../media/Flatiron_Certificate.jpg'
 import nd from '../media/nd-diploma.jpg'
 import harvard from '../media/harvard-certificate.jpg'
 import '../App.css'
+import { useState } from 'react'
 
 function Academic() {
 
+    const [imgState, setState] = useState(false);
+
     return (
-        <div className='certificate-container'>
+        <div className='certificate-container' style={imgState ? {} : {display: 'none'}}>
             <div className='certificate-card'>
                 <div className='certificate-img'>
-                    <img src={nd}  alt='nd'/>
+                    <img onLoad={() => setState(true)} src={nd}  alt='nd'/>
                 </div>
                 <div className="certificate-info">
                     <h3>Bachelor of Science in Civil Engineering</h3>
