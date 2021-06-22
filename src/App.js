@@ -8,7 +8,7 @@ import Academic from './pages/Academic';
 // import Sketch from 'react-p5';
 import './App.css'
 import React from 'react';
-import { EasybaseProvider, useEasybase } from 'easybase-react';
+import { EasybaseProvider } from 'easybase-react';
 import ebconfig from './ebconfig';
 
 
