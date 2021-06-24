@@ -5,6 +5,7 @@ import Project from './pages/Project';
 import Header from './components/Header';
 import Contact from './pages/Contact';
 import Academic from './pages/Academic';
+import About from './pages/About';
 // import Sketch from 'react-p5';
 import './App.css'
 import React from 'react';
@@ -70,9 +71,10 @@ function App() {
         {/* <Sketch setup={setup} draw={draw} windowResized={canvasResize} className='canvas'/> */}
         <Header/>
         <Switch>
-          <Route key='0' path="/" exact render={() =><EasybaseProvider ebconfig={ebconfig}><Project  /></EasybaseProvider>} />
+          <Route key='0' path="/" exact render={() =><EasybaseProvider ebconfig={ebconfig}><Project /></EasybaseProvider>} />
           <Route key='1' path='/contact' render={() => <Contact />} />
           <Route key='2' path='/academics' render={() => <Academic />} />
+          <Route key='3' path='/about' render={() => <About />} />
         </Switch>
     </div>
   )
