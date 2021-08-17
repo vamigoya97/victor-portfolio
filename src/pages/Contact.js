@@ -4,6 +4,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import '../App.css';
 import React, { useState } from 'react';
+import Resume from '../media/resume.pdf';
 
 function Contact() {
 
@@ -19,8 +20,8 @@ function Contact() {
                 <p><b className='contact-link'><a href='https://www.linkedin.com/in/victor-amigo/' alt='linkedin' target="_blank" rel="noopener noreferrer" style={colorHover1 ? {color: '#4d648d'} : null}>Add me on LinkedIn</a></b></p>
             </div>
             <div className='icon-card' onMouseEnter={() => setColor2(true)} onMouseLeave={() => setColor2(false)}>
-                <a href='https://docs.google.com/document/d/1xSpu2-Yjjej3vPwnBxZx5C_mP9ReNsC2CTJoY0y3ss4/edit?usp=sharing' alt='resume' target="_blank" rel="noopener noreferrer"><AssignmentIndIcon id='icon' style={colorHover2 ? {color: '#4d648d'} : null} /></a>
-                <p><b className='contact-link'><a href='https://docs.google.com/document/d/1xSpu2-Yjjej3vPwnBxZx5C_mP9ReNsC2CTJoY0y3ss4/edit?usp=sharing' alt='resume' target="_blank" rel="noopener noreferrer" style={colorHover2 ? {color: '#4d648d'} : null}>Take a look at my resume</a></b></p>
+                <a href={Resume} alt='resume' download='Victor Amigo - Resume'><AssignmentIndIcon id='icon' style={colorHover2 ? {color: '#4d648d'} : null} /></a>
+                <p><b className='contact-link'><a href={Resume} alt='resume' download='Victor Amigo - Resume' style={colorHover2 ? {color: '#4d648d'} : null}>Take a look at my resume</a></b></p>
             </div>
             <div className='icon-card' onMouseEnter={() => setColor3(true)} onMouseLeave={() => setColor3(false)}>
                 <a href='https://github.com/vamigoya97' alt='github' target="_blank" rel="noopener noreferrer"><GitHubIcon id='icon' style={colorHover3 ? {color: '#4d648d'} : null}/></a>
