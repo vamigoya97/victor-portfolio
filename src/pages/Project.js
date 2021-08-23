@@ -17,11 +17,11 @@ function Project() {
         mounted();
     }, []);
 
-  const sortedData = easybaseData.sort((a, b) => b.datestarted > a.datestarted ? 1 : -1);
+    const sortedData = easybaseData.sort((a, b) => b.datestarted > a.datestarted ? 1 : -1);
 
 
     const addProjectCard = sortedData => {
-        return sortedData.map( (elem , count = 1) => <ProjectCard key={elem._key} count={count++} title={elem.title} description={elem.description} giturl={elem.giturl} staticimg={elem.staticimg} medialink={elem.medialink} techstack={elem.techstack} datestarted={elem.datestarted} workprogress={elem.workprogress} />)
+        return sortedData.map((elem , count = 1) => <ProjectCard key={elem._key} count={count++} title={elem.title} description={elem.description} giturl={elem.giturl} staticimg={elem.staticimg} medialink={elem.medialink} techstack={elem.techstack} datestarted={elem.datestarted} workprogress={elem.workprogress} />)
     }
 
     return (
